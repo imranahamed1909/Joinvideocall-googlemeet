@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Login from "../../../components/Login";
 import Webcam from "react-webcam";
 import { API_URL, site } from "../../../config";
 import { TbSquareArrowUp } from "react-icons/tb";
 import { FaLaptopFile } from "react-icons/fa6";
 import { BsCameraVideoOff } from "react-icons/bs";
 import { FaMicrophoneSlash } from "react-icons/fa6"
+import LoginForm from "../../../components/LoginForm";
 
 
 export default function Home() {
@@ -33,13 +33,6 @@ export default function Home() {
               <div className="">
               <nav className="flex justify-between m-4">
               <img src='/google_meet_logo.svg' height={40} width={201}/>
-              {/* <div className="flex">
-              <div className="flex flex-col">
-              <p>yusuf@gmail.com</p>
-                 <p>Switch account</p>
-              </div>
-              <img src='/avatar.png' height={36} width={36} className="rounded-full"/>
-              </div> */}
               </nav>
               <div className="flex pt-[50px] pl-5">
                 <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
@@ -60,7 +53,7 @@ export default function Home() {
              </div>
              
             ) : (
-              <Login />
+              <LoginForm />
             )}
           </>
         

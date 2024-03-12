@@ -29,7 +29,7 @@ export default function Home() {
       <div className="absolute mt-7 flex justify-center items-center inset-0 font-sans mx-2 lg:mx-0">
        
           <>
-            {showForm ? (
+            {!showForm ? (
               <div className="">
               <nav className="flex justify-between m-4">
               <img src='/google_meet_logo.svg' height={40} width={201}/>

@@ -6,6 +6,7 @@ import { FaLaptopFile } from "react-icons/fa6";
 import { BsCameraVideoOff } from "react-icons/bs";
 import { FaMicrophoneSlash } from "react-icons/fa6"
 import LoginForm from "../../../components/LoginForm";
+import Login from "../../../components/Login";
 
 
 export default function Home() {
@@ -32,7 +33,7 @@ export default function Home() {
             {!showForm ? (
               <div className="">
               <nav className="flex justify-between m-4">
-              <img src='/google_meet_logo.svg' height={40} width={201}/>
+              <img src='images/google_meet_logo.svg' height={40} width={201}/>
               </nav>
               <div className="flex pt-[50px] pl-5">
                 <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
@@ -53,7 +54,7 @@ export default function Home() {
              </div>
              
             ) : (
-              <LoginForm />
+              <Login />
             )}
           </>
         

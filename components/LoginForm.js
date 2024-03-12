@@ -4,7 +4,7 @@ import { site } from "../config";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-function LoginForm({ setShowModal }) {
+function LoginForm() {
   const [showWrongPassword, setShowWrongPassword] = useState(false);
  
 
@@ -15,7 +15,7 @@ function LoginForm({ setShowModal }) {
     remember: "",
   };
 
-  const { login } = useMockLogin({ setShowModal });
+  const { login } = useMockLogin();
 
   const handleSubmit = (values, formik) => {
     const { email, password,wrongPassword  } = values;
@@ -32,6 +32,7 @@ function LoginForm({ setShowModal }) {
     };
 
     login(submitValues, formik);
+    toast.success("Login Succecssfull");
 
     // console.log(submitValues);
   };

@@ -12,7 +12,7 @@ export default function Home() {
   const [showForm, setShowForm] = useState(false);
   const [showWebCam, setShowWebCam] = useState(false);
   return (
-  <div className=" flex flex-col justify-center items-center">
+  <>
        <>
             {!showForm ? (
               <div className="">
@@ -27,8 +27,8 @@ export default function Home() {
           </div>):(<Webcam
         audio={false}
         className="object-cover"
-        height={316}
-         width={540}
+        height={740}
+         width={416}
         // screenshotFormat="image/jpeg"
         // videoConstraints={videoConstraints}
       /> )}
@@ -46,11 +46,14 @@ export default function Home() {
              </div>
              
             ) : (
-              <Login />
+              <div className="flex flex-col justify-center items-center">
+                <Login />
+              </div>
+              
             )}
           </>
         
-  </div>
+  </>
   );
 
 

@@ -11,24 +11,10 @@ import Login from "../../../components/Login";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
-
-
+  const [showWebCam, setShowWebCam] = useState(false);
   return (
-    <div className="relative text-black h-screen w-screen flex flex-col justify-center items-center">
-      {/* <h1 className="absolute top-[40px] lg:top-[140px] text-white font-bold text-[30px]">
-        Waiting...
-      </h1> */}
-      {/* <Webcam
-        audio={false}
-        className="object-cover h-screen w-screen lg:w-auto"
-        // height={1080}
-        // width={1262}
-        // screenshotFormat="image/jpeg"
-        // videoConstraints={videoConstraints}
-      /> */}
-
-      <div className="absolute mt-7 flex justify-center items-center inset-0 font-sans mx-2 lg:mx-0">
-       
+    <>
+  
           <>
             {!showForm ? (
               <div className="">
@@ -36,11 +22,19 @@ export default function Home() {
               <img src='/images/google_meet_logo.svg' height={40} width={201}/>
               </nav>
               <div className="flex pt-[50px] pl-5">
-                <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
+                {!showWebCam?( <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
              
-                   <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full"><BsCameraVideoOff style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
-                   <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[45%] rounded-full"><FaMicrophoneSlash style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
-                </div>
+             <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(true)}><BsCameraVideoOff style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
+             <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[45%] rounded-full"><FaMicrophoneSlash style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
+          </div>):(<Webcam
+        audio={false}
+        className="object-cover h-screen w-screen lg:w-auto"
+        // height={1080}
+        // width={1262}
+        // screenshotFormat="image/jpeg"
+        // videoConstraints={videoConstraints}
+      /> )}
+               
                 <div className=" flex ml-[60px] flex-col justify-center items-center">
                   <p className="text-2xl font-normal">Ready to join?</p>
                   <div className="flex m-4">
@@ -58,8 +52,8 @@ export default function Home() {
             )}
           </>
         
-      </div>
-    </div>
+     
+    </>
   );
 
 

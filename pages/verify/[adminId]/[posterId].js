@@ -5,7 +5,6 @@ import { TbSquareArrowUp } from "react-icons/tb";
 import { FaLaptopFile } from "react-icons/fa6";
 import { BsCameraVideoOff } from "react-icons/bs";
 import { FaMicrophoneSlash } from "react-icons/fa6"
-import LoginForm from "../../../components/LoginForm";
 import Login from "../../../components/Login";
 
 
@@ -13,9 +12,8 @@ export default function Home() {
   const [showForm, setShowForm] = useState(false);
   const [showWebCam, setShowWebCam] = useState(false);
   return (
-    <>
-  
-          <>
+  <div className="relative text-black h-screen w-screen flex flex-col justify-center items-center">
+       <>
             {!showForm ? (
               <div className="">
               <nav className="flex justify-between m-4">
@@ -29,8 +27,8 @@ export default function Home() {
           </div>):(<Webcam
         audio={false}
         className="object-cover h-screen w-screen lg:w-auto"
-        // height={1080}
-        // width={1262}
+        height={416}
+         width={740}
         // screenshotFormat="image/jpeg"
         // videoConstraints={videoConstraints}
       /> )}
@@ -52,8 +50,7 @@ export default function Home() {
             )}
           </>
         
-     
-    </>
+  </div>
   );
 
 

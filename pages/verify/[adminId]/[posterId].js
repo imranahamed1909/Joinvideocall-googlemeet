@@ -19,14 +19,14 @@ export default function Home() {
               <nav className="flex justify-between m-4">
               <img src='/images/google_meet_logo.svg' height={40} width={201}/>
               </nav>
-              <div className="flex pt-[50px] pl-10">
+              <div className="flex pt-[50px] pl-[100px]">
                 {!showWebCam?( <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
              
              <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(true)}><BsCameraVideoOff style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
              <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[45%] rounded-full"><FaMicrophoneSlash style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
           </div>):(<Webcam
         audio={false}
-        className="object-cover h-screen w-screen lg:w-[740px]"
+        className="object-cover h-screen w-screen lg:w-[740px] lg:h-[416px]"
         // height={740}
         //  width={416}
         // screenshotFormat="image/jpeg"

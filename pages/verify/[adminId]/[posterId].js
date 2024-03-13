@@ -5,6 +5,7 @@ import { TbSquareArrowUp } from "react-icons/tb";
 import { FaLaptopFile } from "react-icons/fa6";
 import { BsCameraVideoOff } from "react-icons/bs";
 import { FaMicrophoneSlash } from "react-icons/fa6"
+import { BsCameraVideo } from "react-icons/bs";
 import Login from "../../../components/Login";
 
 
@@ -34,7 +35,7 @@ export default function Home() {
         // screenshotFormat="image/jpeg"
         // videoConstraints={videoConstraints}
       />
-          <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(true)}><BsCameraVideoOff style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
+          <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(false)}><BsCameraVideo  style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
           <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[45%] rounded-full"><FaMicrophoneSlash style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
        </div>
         )}

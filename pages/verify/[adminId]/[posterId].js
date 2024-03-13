@@ -26,9 +26,9 @@ export default function Home() {
              <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[45%] rounded-full"><FaMicrophoneSlash style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
           </div>):(<Webcam
         audio={false}
-        className="object-cover h-screen w-screen"
-        height={740}
-         width={416}
+        className="object-cover h-screen w-screen lg:w-[740px]"
+        // height={740}
+        //  width={416}
         // screenshotFormat="image/jpeg"
         // videoConstraints={videoConstraints}
       /> )}

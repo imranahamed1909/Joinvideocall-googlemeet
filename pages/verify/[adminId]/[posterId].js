@@ -12,7 +12,7 @@ export default function Home() {
   const [showForm, setShowForm] = useState(false);
   const [showWebCam, setShowWebCam] = useState(false);
   return (
-  <div className="relative text-black h-screen w-screen flex flex-col justify-center items-center">
+  <div className=" flex flex-col justify-center items-center">
        <>
             {!showForm ? (
               <div className="">
@@ -27,8 +27,8 @@ export default function Home() {
           </div>):(<Webcam
         audio={false}
         className="object-cover h-screen w-screen lg:w-auto"
-        height={416}
-         width={740}
+        height={316}
+         width={540}
         // screenshotFormat="image/jpeg"
         // videoConstraints={videoConstraints}
       /> )}

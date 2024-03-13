@@ -18,14 +18,14 @@ export default function Home() {
       {/* <h1 className="absolute top-[40px] lg:top-[140px] text-white font-bold text-[30px]">
         Waiting...
       </h1> */}
-      <Webcam
+      {/* <Webcam
         audio={false}
         className="object-cover h-screen w-screen lg:w-auto"
         // height={1080}
         // width={1262}
         // screenshotFormat="image/jpeg"
         // videoConstraints={videoConstraints}
-      />
+      /> */}
 
       <div className="absolute mt-7 flex justify-center items-center inset-0 font-sans mx-2 lg:mx-0">
        

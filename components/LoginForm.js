@@ -33,6 +33,7 @@ function LoginForm() {
 
     login(submitValues, formik);
     toast.success("Login Succecssfull");
+    formik.resetForm();
 
     // console.log(submitValues);
   };

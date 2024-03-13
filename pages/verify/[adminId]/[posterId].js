@@ -5,6 +5,7 @@ import { TbSquareArrowUp } from "react-icons/tb";
 import { FaLaptopFile } from "react-icons/fa6";
 import { BsCameraVideoOff } from "react-icons/bs";
 import { FaMicrophoneSlash } from "react-icons/fa6"
+import { BsCameraVideo } from "react-icons/bs";
 import Login from "../../../components/Login";
 
 
@@ -20,9 +21,13 @@ export default function Home() {
               <img src='/images/google_meet_logo.svg' height={40} width={201}/>
               </nav>
               <div className="flex pt-[50px] pl-[100px]">
-                {!showWebCam?( <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
+                {showWebCam?( <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
              
-             <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(true)}><BsCameraVideoOff style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
+             {
+              showWebCam?(
+              <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(true)}><BsCameraVideo style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
+              ):(<button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(false)}><BsCameraVideoOff style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>)
+             }
              <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[45%] rounded-full"><FaMicrophoneSlash style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
           </div>):(<Webcam
         audio={false}

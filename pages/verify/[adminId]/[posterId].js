@@ -23,7 +23,7 @@ export default function Home() {
               <div className="flex pt-[50px] pl-[100px]">
                 {showWebCam?(
                    <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
-             <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(true)}><BsCameraVideoOff style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
+             <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(false)}><BsCameraVideoOff style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
              <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[45%] rounded-full"><FaMicrophoneSlash style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
           </div>):(
           <div className=" relative w-[740px] h-[416px] bg-black outline-none rounded-md">
@@ -35,7 +35,7 @@ export default function Home() {
         // screenshotFormat="image/jpeg"
         // videoConstraints={videoConstraints}
       />
-          <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(false)}><BsCameraVideo  style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
+          <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[55%] rounded-full" onClick={()=>setShowWebCam(true)}><BsCameraVideo  style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
           <button className="bg-[#EA4335] text-white text-center w-[56px] h-[56px] absolute  bottom-[5%] left-[45%] rounded-full"><FaMicrophoneSlash style={{display:"inline", fontSize:"30px", textAlign:"center"}}/></button>
        </div>
         )}
